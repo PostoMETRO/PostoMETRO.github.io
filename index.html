@@ -1,0 +1,219 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="PostoMETRO: Pose Token Enhanced Mesh Transformer for Robust 3D Human Mesh Recovery.">
+  <meta name="keywords" content="HMR, Human Mesh Recovery, image to 3D">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PostoMETRO</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <!-- <link rel="icon" href="./static/logo.png"> -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">PostoMETRO: Pose Token Enhanced Mesh Transformer for Robust 3D Human Mesh Recovery</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              Anonymous Submission
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/PostoMETRO/PostoMETRO-Paper"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <br>
+        <img src="./static/visualization.png"
+        class=""
+        alt=""/>
+        <br>
+        <br>
+        <img src="./static/visualization1.png"
+        class=""
+        alt=""/>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            With the recent advancements in single-image-based human mesh recovery, there is a growing interest in enhancing its performance in certain extreme scenarios, such as occlusion, while maintaining overall model accuracy. Although obtaining accurately annotated 3D human poses under occlusion is challenging, there is still a wealth of rich and precise 2D pose annotations that can be leveraged. However, existing works mostly focus on directly leveraging 2D pose coordinates to estimate 3D pose and mesh. In this paper, we present <b>PostoMETRO</b> (<b>Pos</b>e <b>to</b>ken enhanced <b>ME</b>sh <b>TR</b>ansf<b>O</b>rmer), which integrates occlusion-resilient 2D pose representation into transformers in a token-wise manner. Utilizing a specialized pose tokenizer, we efficiently condense 2D pose data to a compact sequence of pose tokens and feed them to the transformer together with the image tokens. This process not only ensures a rich depiction of texture from the image but also fosters a robust integration of pose and image information. Subsequently, these combined tokens are queried by vertex and joint tokens to decode 3D coordinates of mesh vertices and human joints. Facilitated by the robust pose token representation and the effective combination, we are able to produce more precise 3D coordinates, even under extreme scenarios like occlusion. Experiments on both standard and occlusion-specific benchmarks demonstrate the effectiveness of <b>PostoMETRO</b>, and a more than 6% performance improvement compared to our baseline model is obtained. Qualitative results further illustrate the clarity of how 2D pose can help 3D reconstruction.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <div class = "has-text-centered">
+          <h2 class="title is-3">Method</h2>
+        </div>
+          <img src="./static/pipeline.png"
+          class=""
+          alt=""/>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <div class="has-text-centered">
+          <h2 class="title is-3">Visualization</h2>
+        </div>
+        <br>
+
+        <div style="display: flex; align-items: center; justify-content: center; flex-wrap: wrap;">
+          <div style="display: flex; align-items: center;">
+            <img src="./static/teaser_narrow_1.gif" alt="teaser 1" style="height: 300px; margin-right: 20px; margin-bottom: 20px;">
+            <img src="./static/teaser_wide_1.gif" alt="teaser 2" style="height: 300px; margin-bottom: 20px;">
+          </div>
+        
+          <div style="display: flex; align-items: center;">
+            <img src="./static/teaser_narrow_2.gif" alt="teaser 3" style="height: 300px; margin-right: 20px; margin-bottom: 20px;">
+            <img src="./static/teaser_wide_2.gif" alt="teaser 4" style="height: 300px; margin-bottom: 20px;">
+          </div>
+        </div>
+
+        <img src="./static/occlusion_analysis.png" class="" alt=""/>
+        <img src="./static/occ1.png" class="" alt=""/>
+        <img src="./static/occ2.png" class="" alt=""/>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <div class = "has-text-centered">
+          <h2 class="title is-3">Comparison with Existing Methods</h2>
+        </div>
+        <br>
+        <img src="./static/result1.png"
+        class=""
+        alt=""/>
+        <br>
+        <br>
+        <img src="./static/result4.png"
+        class=""
+        alt=""/>
+        <br>
+        <br>
+        <img src="./static/result5.png"
+        class=""
+        alt=""/>
+        <br>
+        <br>
+        <img src="./static/result2.png"
+        class=""
+        alt=""/>
+        <br>
+        <br>
+        <img src="./static/result3.png"
+        class=""
+        alt=""/>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link"
+         href="https://arxiv.org/pdf/2306.16928.pdf">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/One-2-3-45/One-2-3-45" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is borrowed from <a
+              href="https://github.com/nerfies/nerfies.github.io">nerfies</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
